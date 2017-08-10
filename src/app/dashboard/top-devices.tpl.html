@@ -1,0 +1,25 @@
+<div class="row-table row-table-col">
+    <div class="row-table-cell"><h4>CPU</h4></div>
+    <div class="row-table-cell" ng-repeat="device in devices | orderBy:'-cpuPct'| limitTo: 5">
+          <div>{{device.ip}} <strong class="sort-value">{{device.cpuPct}}%</strong></div> 
+          <span class="owner">{{device.owner}}</span> 
+    </div>
+  
+    <div class="row-table-cell"><h4>Mem</h4></div>
+    <div class="row-table-cell" ng-repeat="device in devices | orderBy:'-memBytes'| limitTo: 5">
+        <div>{{device.ip}} <strong class="sort-value">{{device.memBytes | bytesToStr }}</strong> </div> 
+        <span class="owner">{{device.owner}}</span> 
+    </div>
+  
+    <div class="row-table-cell"><h4>TX</h4></div>
+    <div class="row-table-cell" ng-repeat="device in devices | orderBy:'-networkTxBytes'| limitTo: 5">
+        <div>{{device.ip}} <strong class="sort-value">{{device.networkTxBytes | bytesToStr }}</strong> </div> 
+        <span class="owner">{{device.owner}}</span>
+    </div>
+  
+  <div class="row-table-cell"><h4>RX</h4></div>
+    <div class="row-table-cell" ng-repeat="device in devices | orderBy:'-networkRxBytes'| limitTo: 5">
+         <div>{{device.ip}} <strong class="sort-value">{{device.networkRxBytes | bytesToStr }}</strong></div> 
+         <span class="owner">{{device.owner}}</span> 
+    </div>
+  </div>

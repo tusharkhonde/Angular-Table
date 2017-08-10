@@ -1,0 +1,31 @@
+<h3>Top devices</h3>
+<topdevices devices="devices"></topdevices>
+
+<div class="dashboard">
+    <h3>All devices</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="col-md-2">IP</th>
+                <th class="col-md-2">Owner</th>
+                <th class="col-md-2">CPU</th>
+                <th class="col-md-2">Mem</th>
+                <th class="col-md-2">TX</th>
+                <th class="col-md-2">RX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="device in devices">
+                <td>{{ device.ip}}</td>
+                <td><div contenteditable="true" ng-model="device.owner">{{device.owner}}</div></td>
+                <td>{{ device.cpuPct}}%</td>
+                <td>{{ device.memBytes | bytesToStr }}</td>
+                <td>{{ device.networkRxBytes | bytesToStr }}</td>
+                <td>{{ device.networkTxBytes | bytesToStr }}</td>
+            </tr>
+            <tr ng-show="!devices.length">
+                <td colspan="6">No device info available</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
