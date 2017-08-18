@@ -1,9 +1,7 @@
 {
-  "name": "interview-app-devmgr",
-  "description": "Interview question app - Device Manager",
-  "version": "0.0.0",
-  "homepage": "https://github.com/avaliani/interview-app-devmgr",
-  "license": "MIT",
+  "name": "Angular-App",
+  "description": "Device Manager",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "angular": "1.2.x",

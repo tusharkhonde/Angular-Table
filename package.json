@@ -1,9 +1,7 @@
 {
   "name": "angular-seed",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/avaliani/interview-app-devmgr",
+  "version": "0.0.1",
   "devDependencies": {
     "karma": "~0.10",
     "protractor": "~0.20.1",
